@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PUP Hymn</title>
+     <link rel="icon" href="pup-logo.png" type="image/x-icon">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+</head>
+
+<body>
+     <div class="container-fluid">
+          <div id="header" class="navbar">
+               <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         <img id="logo" src="pup-logo.png" alt="Logo">
+                    </div>
+
+                    <div class="col-md-9 col-sm-6">
+                         <div class="header-text">
+                              <br><h2>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h2>
+                              <h3>Imno ng PUP (The PUP Hymn)</h3>
+                              <h4>S. Calabig, S. Roldan, and R. Amaranto</h4>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div id="content">
+               <div class="marquee-content">
+                    <p><i><br><br><br><br><br><br><br>(Instrumental)</i></p><br><br>
+                    <p>Sintang Paaralan</p>
+                    <p>Tanglaw ka ng bayan</p>
+                    <p>Pandayan ng isip ng kabataan</p>
+                    <p>Kami ay dumating nang salat sa yaman</p><br>
+                    <p>Hanap na dunong ay iyong alay</p>
+                    <p>Ang layunin mong makatao</p>
+                    <p>Dinarangal ang Pilipino</p>
+                    <p>Ang iyong aral, diwa, adhikang taglay</p><br>
+                    <p>PUP, aming gabay</p>
+                    <p>Paaralang dakila</p>
+                    <p>PUP, pinagpala</p><br><br>
+                    <p>Gagamitin ang karunungan</p>
+                    <p>Mula sa iyo, para sa bayan</p>
+                    <p>Ang iyong aral, diwa, adhikang taglay</p><br><br>
+                    <p>PUP, aming gabay</p>
+                    <p>Paaralang dakila</p>
+                    <p>PUP, pinagpala</p><br><br><hr><br>
+               </div>
+               
+          </div>
+          
+          <div id="music">
+               <audio id="myAudio" controls preload="metadata">
+                    <source src="pup-hymn-instrumental-version.mp3" type="audio/mpeg">
+               </audio>
+          </div>
+
+     <!-- Site footer -->
+     <footer class="site-footer">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                         <p class="copyright-text">© 1998-2021 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                         <ul class="social-icons">
+                              <li><a class="website" href="https://www.pup.edu.ph/about/" target="_blank"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+                              <li><a class="youtube" href="https://youtu.be/Yib_s5UeGvc?si=fjS7zeMxaokz8LSW" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                              <li><a class="hymn" href="https://www.pup.edu.ph/about/hymn" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </footer>
+          
+          <script>
+               var audio = document.getElementById('myAudio');
+               var marqueeContent = document.querySelector('.marquee-content');
+
+               audio.addEventListener('play', function() {
+                    marqueeContent.style.animationPlayState = 'running';
+               });
+
+               audio.addEventListener('pause', function() {
+                    marqueeContent.style.animationPlayState = 'paused';
+               });
+
+               audio.addEventListener('ended', function () {
+                    marqueeContent.style.animation = '';
+                    animationPaused = true;
+               });
+          </script>
+
+     </div>
+
+
+</body>
+     
+</html>

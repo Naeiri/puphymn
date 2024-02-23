@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tiro Bangla';
+    flex-direction: column;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/0/06/PUP_Mabini_Campus_-_pylon_%28side_view%29_%28PUP%2C_Santa_Mesa%2C_Manila%29%282018-03-06%29.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#header {
+    background-color: rgba(51, 51, 51, 0.3);
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+#logo {
+    max-width: 120px;
+    margin-right: 15px;
+    margin-left: 90px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 30px;
+}
+h3 {
+    margin-top: 0px;
+    font-size: 25px;
+}
+h4 {
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+#content {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 410px;
+    position: relative;
+    text-align: center;
+    margin: 5%;
+    margin-top: 3%;
+}
+
+.marquee-content {
+    animation: scroll-up 110s linear infinite;
+    animation-play-state: paused;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.marquee-content p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+#music{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+audio:hover , audio:focus , audio:active{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+audio{
+    transition: all 0.2s linear;
+    box-shadow: 2px 2px 4px 0px #f3efd0;
+    border-radius: 5px;
+}
+
+/*FOOTER*/
+.site-footer
+{
+    background-color:#26272b;
+    padding:30px 0 0px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+    margin-bottom: 0;
+}
+.site-footer a
+{
+    color:#737373;
+}
+.site-footer a:hover
+{
+    color:#3366cc;
+    text-decoration:none;
+}
+.site-footer .social-icons
+{
+    text-align:right
+}
+.site-footer .social-icons a
+{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+}
+
+.copyright-text
+{
+    margin:0;
+    margin-bottom: 4px;
+}
+
+
+.social-icons
+{
+    padding-left:0;
+    list-style:none;
+}
+.social-icons li
+{
+    display:inline-block;
+}
+.social-icons li.title
+{
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+}
+.social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+    color:#fff;
+    background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+}
+.social-icons a.website:hover
+{
+    background-color:#3b5998
+}
+.social-icons a.youtube:hover
+{
+    background-color:#b13737
+}
+.social-icons a.hymn:hover
+{
+    background-color:#b84370
+}
+
+@media screen and (max-width: 767px)
+{
+    #logo {
+        height: 50px;
+        margin-left: 0;
+    }
+    #header h2 {
+        font-size: 20px;
+    }
+    #header h3 {
+        font-size: 15px;
+    }
+    #header h4 {
+        font-size: 10px;
+    }
+    
+    #content {
+        width: 90%;
+    }
+    .social-icons li.title
+    {
+        display:block;
+        margin-right:0;
+        font-weight:600
+    }
+    .site-footer [class^=col-]
+    {
+        margin-bottom:30px
+    }
+    .site-footer
+    {
+        padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+        text-align:center
+    }
+
+}
